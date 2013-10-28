@@ -1,13 +1,10 @@
-import tkinter
+from tkinter import *
 
-root = tkinter.Tk()
+master = Tk()
 
-canvas = tkinter.Canvas(root)
+canvas = Canvas(master, width = 300, height = 200)
+canvas.pack(expand = YES, fill = BOTH)
 
-canvas.grid(row = 0, column = 0)
-
-photo = tkinter.PhotoImage(file = '/Users/minecraft/Desktop/Untitled.gif')
-
-canvas.create_image(0,0, image=photo)
-
-root.mainloop()
+gif1 = PhotoImage(file = '/Volumes/SCHOOL/SCHOOL STUFF/SNC1D/My "Favourite" Element Project/Hafnium/Images/1_Hafnium.gif')
+canvas.create_image(0, 0, anchor=NW, image = gif1)
+mainloop()
